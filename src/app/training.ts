@@ -1,12 +1,9 @@
-// ===== 1. ИНТЕРФЕЙСЫ =====
-
 interface IUser {
   id?: number;
   name: string;
   email: string;
   age: number;
 }
-
 interface IAdmin extends IUser {
   phone: string;
   isActive: boolean;
@@ -37,7 +34,7 @@ const users: IUser[] = [
   }
 ];
 
-const adultUsers = users.filter((user) => {
+const adultUsers: IUser[] = users.filter((user: IUser): boolean => {
   return user.age >= 20;
 });
 
